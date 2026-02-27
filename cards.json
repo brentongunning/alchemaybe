@@ -1,0 +1,33 @@
+{
+  "materials": [
+    { "name": "Fire", "description": "Crackling orange flames dancing and leaping, radiating waves of heat that warp the air above" },
+    { "name": "Water", "description": "Crystal-clear flowing water, rippling and splashing with cool refreshing energy" },
+    { "name": "Wind", "description": "A rushing gust of invisible air, swirling leaves and dust in spiraling currents" },
+    { "name": "Light", "description": "A brilliant beam of pure golden-white radiance, warm and glowing like bottled sunshine" },
+    { "name": "Stone", "description": "A hefty chunk of rough grey granite, ancient and weathered with flecks of mica catching the light" },
+    { "name": "Metal", "description": "A gleaming ingot of raw iron ore, dense and cold with a silvery sheen across its hammered surface" },
+    { "name": "Clay", "description": "A wet lump of reddish-brown clay, soft and pliable with fingerprint impressions, ready to be shaped" },
+    { "name": "Wood", "description": "A thick cut of sturdy oak timber, showing golden rings of grain and smelling of fresh sawdust" },
+    { "name": "Bone", "description": "A pale white animal bone, smooth and hard, sun-bleached and slightly curved with hollow marrow inside" },
+    { "name": "Fiber", "description": "A bundle of raw stringy plant fibers, golden-green strands tangled and ready to be woven or twisted into rope" },
+    { "name": "Egg", "description": "A speckled oval egg with a delicate shell, warm to the touch and full of rich golden yolk inside" },
+    { "name": "Seed", "description": "A small dark seed with a tough outer shell, holding a tiny curled embryo packed with potential energy" },
+    { "name": "Sand", "description": "A pile of fine golden sand grains, warm and loose, glittering faintly like countless tiny crystals" },
+    { "name": "Coal", "description": "A jagged chunk of jet-black coal, dusty and crumbly with a faint oily sheen, eager to burn" }
+  ],
+  "intents": [
+    { "name": "Loud", "description": "Intent — drums, bells, horns, whistles, anything that makes noise" },
+    { "name": "Bright", "description": "Intent — lanterns, torches, mirrors, beacons, things that glow or shine" },
+    { "name": "Soft", "description": "Intent — pillows, blankets, clothing, cushions, gentle comforts" },
+    { "name": "Sharp", "description": "Intent — swords, knives, arrows, needles, razors, anything with an edge" },
+    { "name": "Sweet", "description": "Intent — pastries, candy, perfume, honey, treats and pleasant aromas" },
+    { "name": "Cold", "description": "Intent — ice boxes, preserves, cooling fans, frost, things that chill" },
+    { "name": "Tiny", "description": "Intent — needles, keys, rings, coins, thimbles, small precise things" },
+    { "name": "Heavy", "description": "Intent — anvils, anchors, hammers, shields, dense and weighty things" },
+    { "name": "Hollow", "description": "Intent — vases, drums, flutes, bottles, containers and resonant chambers" },
+    { "name": "Sticky", "description": "Intent — glue, tar, traps, tape, flypaper, anything that grips and binds" },
+    { "name": "Ancient", "description": "Intent — runestones, relics, totems, fossils, weathered ritualistic objects" },
+    { "name": "Many", "description": "Intent — multiplies the material into a larger collection: a brick becomes a wall, a thread becomes a tapestry, a coin becomes a treasure hoard" },
+    { "name": "Time", "description": "Intent — accelerates natural growth and aging: a seed becomes a tree, an egg becomes a bird, wood becomes petrified wood, metal becomes rust" }
+  ]
+}

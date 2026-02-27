@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alchemaybe</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="wallet-btn" class="wallet-btn" onclick="connectWallet()">Connect Wallet</button>
+
+    <div id="title-screen" class="screen active">
+        <h1>Alchemaybe</h1>
+        <p class="subtitle">Combine. Craft. Conquer.</p>
+        <div class="menu-buttons">
+            <button onclick="startGame('bot')">Play vs Bot</button>
+            <button onclick="showOverlay('<h2>Coming Soon</h2><p>Multiplayer over network is not yet implemented.</p><button onclick=hideOverlay()>Dismiss</button>')">Play vs Human</button>
+            <button id="store-btn" class="hidden" onclick="showStore()">Card Store</button>
+            <button id="collection-btn" class="hidden" onclick="showCollection()">My Collection</button>
+            <button class="rules-btn" onclick="showRules()">How to Play</button>
+        </div>
+    </div>
+
+    <div id="store-screen" class="screen">
+        <div class="store-header">
+            <h2>Card Store</h2>
+            <button class="back-btn" onclick="closeStore()">Back</button>
+        </div>
+        <div class="store-packs">
+            <div class="pack-card">
+                <div class="pack-title">Starter Pack</div>
+                <div class="pack-contents">2 Base Cards + 1 Crafted Card</div>
+                <div class="pack-price">0.01 SOL</div>
+                <button onclick="buyPack('starter')">Buy Pack</button>
+            </div>
+            <div class="pack-card">
+                <div class="pack-title">Premium Pack</div>
+                <div class="pack-contents">3 Base Cards + 2 Crafted Cards</div>
+                <div class="pack-price">0.015 SOL</div>
+                <button onclick="buyPack('premium')">Buy Pack</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="collection-screen" class="screen">
+        <div class="collection-header">
+            <h2>My Collection</h2>
+            <div class="collection-actions">
+                <button id="combine-mode-btn" onclick="toggleCombineMode()">Combine Cards</button>
+                <button id="do-combine-btn" class="hidden" onclick="combineOwnedCards()">Combine Selected</button>
+                <button class="back-btn" onclick="closeCollection()">Back</button>
+            </div>
+        </div>
+        <div class="collection-grid" id="collection-grid"></div>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <div class="status-bar">
+            <div class="player-info p1">
+                <span class="player-label">Player 1</span>
+                <span class="score" id="score-0">0</span>
+            </div>
+            <div class="turn-info" id="turn-info">Your turn</div>
+            <button class="rules-icon" onclick="showRules()" title="How to Play">?</button>
+            <div class="player-info p2">
+                <span class="player-label" id="p2-label">Player 2</span>
+                <span class="score" id="score-1">0</span>
+            </div>
+        </div>
+
+        <div class="board" id="board"></div>
+
+        <div class="hand-area">
+            <div class="hand-controls">
+                <button id="combine-btn" onclick="doCombine()" disabled>Combine</button>
+                <button id="discard-btn" onclick="doDiscard()" disabled>Discard</button>
+                <button id="end-turn-btn" onclick="endTurn()">End Turn</button>
+                <button id="quit-btn" onclick="confirmQuit()">Quit</button>
+            </div>
+            <div class="hand" id="hand"></div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content" id="overlay-content"></div>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <div id="loading-text">Crafting...</div>
+    </div>
+
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="/wallet.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>

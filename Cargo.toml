@@ -1,0 +1,3 @@
+[workspace]
+members = ["generation", "game", "explore"]
+resolver = "2"
